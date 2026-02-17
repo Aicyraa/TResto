@@ -12,9 +12,10 @@ export default {
 
    plugins: [
       new HtmlWebpackPlugin({
-        template: "./src/template.html",
+         template: "./src/template.html",
+         favicon: "./src/favicon.ico",
       }),
-    ],
+   ],
 
    module: {
       rules: [
@@ -26,6 +27,10 @@ export default {
          {
             test: /\.(png|svg|jpg|jpeg|gif)$/i,
             type: "asset/resource",
+         },
+         {
+            test: /\.html$/i,
+            use: ["html-loader"],
          },
       ],
    },
