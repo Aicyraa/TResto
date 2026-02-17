@@ -1,1 +1,3 @@
-export const menu = "Menu JS" 
+export function menu() {
+   alert("Menu")
+}
