@@ -1,6 +1,9 @@
 // Handles logic for content loading
 import "./style/main.css"
-import { branch } from "./contents/branches.js"
+import "./style/home.css"
+import "./style/menu.css"
+import "./style/branch.css"
+import { branch } from "./contents/branch.js"
 import { home } from "./contents/home.js"
 import { menu } from "./contents/menu.js"
 
@@ -11,11 +14,21 @@ const el = {
 }
 
 function switchTab(e) {
-   const tabs = ["home", "menu", "branches"]
+   const tabs = ["home", "menu", "branch"]
    const target = e.target;
    if (tabs.includes(target.id)) {
       switch(target.id) {
-         
+         case "home":
+            loadTab(home)
+            break;
+         case "menu":
+            loadTab(menu)
+            break;
+         case "branch":
+            loadTab(branch)
+            break;
+         default:
+            console.log(target.id);
       }   
    }
    
@@ -23,10 +36,12 @@ function switchTab(e) {
 
 
 function loadTab(currentTab) {
-   
+   el.content.innerHTML = "" 
+   el.content.append(currentTab()) 
 }
 
 (function(){
+   loadTab(home) // initialize home tab
    el.nav.addEventListener("click", switchTab) // switch tab function
 
 })();
