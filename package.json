@@ -1,0 +1,25 @@
+{
+  "name": "tresto",
+  "version": "1.0.0",
+  "description": "Cool Restaurant!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aicyraa/TResto.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/Aicyraa/TResto/issues"
+  },
+  "homepage": "https://github.com/Aicyraa/TResto#readme",
+  "devDependencies": {
+    "webpack": "^5.105.2",
+    "webpack-cli": "^6.0.1"
+  }
+}
