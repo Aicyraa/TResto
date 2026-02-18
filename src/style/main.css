@@ -54,23 +54,7 @@
    --popup-overlay: rgba(30, 57, 50, 0.6);
    --popup-border: #E0D8CE;
 
-   /* Shadows */
-   --shadow-sm: 0 1px 3px rgba(30, 57, 50, 0.12);
-   --shadow-md: 0 4px 12px rgba(30, 57, 50, 0.15);
-   --shadow-lg: 0 8px 24px rgba(30, 57, 50, 0.2);
-   --shadow-popup: 0 12px 36px rgba(30, 57, 50, 0.25);
-
-   /* Borders */
-   --border-light: #E0D8CE;
-   --border-medium: #C4B9A8;
    --border-dark: #1E3932;
-
-   /* Status / Feedback */
-   --success: #2E7D32;
-   --warning: #E6A817;
-   --error: #C62828;
-   --info: #1565C0;
-
 
 }
 
