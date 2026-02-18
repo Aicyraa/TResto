@@ -34,7 +34,6 @@ function switchTab(e) {
    
 }
 
-
 function loadTab(currentTab) {
    el.content.innerHTML = "" 
    el.content.append(currentTab()) 
