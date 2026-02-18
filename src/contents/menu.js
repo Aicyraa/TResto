@@ -76,9 +76,18 @@ export function menu() {
 }
 
 function loadData(data) {
+   const images = [
+      "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+      "https://images.unsplash.com/photo-1493770348161-369560ae357d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+      "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+      "https://images.unsplash.com/photo-1482049016688-2d3e1b311543?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+      "https://images.unsplash.com/photo-1484723088339-fe7a7702f23f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+   ];
+   const randomImg = images[data.id % images.length];
+
    return `
       <div class="food-card">
-         <div class="food-image"></div>
+         <div class="food-image" style="background-image: url('${randomImg}')"></div>
          <div class="food-info">
             <h3 class="food-name">${data.name}</h3>
             <div class="food-footer">
@@ -86,9 +95,6 @@ function loadData(data) {
                <span class="food-price">$${data.price.toFixed(2)}</span>
             </div>
             <button class="btn-add-to-cart">
-               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
-               </svg>
                Add to Cart
             </button>
          </div>
